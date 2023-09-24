@@ -1,0 +1,29 @@
+@import '@/styles/_vars.scss';
+
+.block {
+    width: 40%;
+    margin: 0 auto;
+    padding: $padding 0;
+
+    background: $darkGrey;
+    border-radius: $borderRadius + 4;
+
+    text-align: center
+}
+
+.flex {
+    padding: $padding;
+
+    @include flex-column
+}
+
+@media (max-width: 770px) {
+    .list {
+        width: 70%;
+        margin-bottom: 100px
+    }
+}
+
+@media (max-width: 600px) {
+    .list {width: 95%}
+}

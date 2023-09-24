@@ -1,0 +1,51 @@
+@import '@/styles/_vars.scss';
+
+.item {
+  width: 90%;
+  padding: 10px 15px;
+
+  background: $grey;
+  border-radius: $borderRadius;
+
+  transition: all $animation ease;
+
+  &:hover {background: $lightGrey}
+}
+
+.date {
+  transition: all $animation ease;
+  font-size: 1.5rem
+}
+
+.line {@include _line}
+
+.link:hover .date {color: $orange}
+
+.info {font-weight: 500}  
+
+.linkNasa {
+  transition: all ease $animation;
+
+  &:hover {color: $orange}
+}
+
+.distance {
+  position: relative;
+  margin-bottom: 1.2rem;
+
+  &::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    content: "";
+    display: block;
+    width: 100%;
+    height: 10px;
+    margin-top: .3rem;
+
+    background: url(/arrow.svg) 50% no-repeat;
+    background-size: contain
+  }
+}

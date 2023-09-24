@@ -1,0 +1,78 @@
+@import './_vars.scss';
+
+.tdu {text-decoration: underline}
+
+.main::before {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+
+  content: "";
+  display: block;
+  width: 35rem;
+  height: 47rem;
+
+  background: $black url(/planeta.webp) 0 no-repeat;
+  transform: translate(-40%, -50%)
+}
+
+.label {
+  @include _line;
+  gap: 5px
+}
+
+.btn {
+  min-width: 50px;
+  padding: .5em 1em;
+  cursor: pointer;
+  transition: all $animation ease;
+
+  border-radius: $borderRadius;
+  
+  color: $black;
+  text-transform: uppercase;
+
+  &__distance {
+    font-size: 1.1rem;
+    cursor: pointer
+  }
+
+  &_orange {
+    background: $orange;
+
+    & span {color: $black}
+
+    &:hover {background: $hover}
+  }
+
+  &[disabled] {
+    background: rgb(71, 71, 71, .3);
+    cursor: auto;
+  }
+
+  &_active {background: $hover}
+}
+
+@media (min-width: 1600px) {
+  .main::before {
+    width: 30vw;
+
+    right: 40vw;
+    transform: translate(-20%, -50%);
+  }
+}
+
+@media (max-width: 770px) {
+  .main::before {
+    right: 40vw;
+    transform: translate(-80%, -50%);
+  }
+}
+
+@media (max-width: 600px) {
+  .main::before {
+    right: 30vw;
+    transform: translate(-90%, -50%);
+  }
+}
