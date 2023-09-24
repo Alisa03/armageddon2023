@@ -66,7 +66,7 @@ export async function getServerSideProps(context: IAsteroids) {
   const url = "https://api.nasa.gov/neo/rest/v1/feed";
   const start = getFormatedDate();
   const end = getFormatedDate();
-  const apiKey = process.env.API_KEY
+  const apiKey = "TnwsoDArReE0abFZZ2T0RTcQewIELp42XHs9ycxo"
 
   try {
     const apiUrl: string = `${url}?start_date=${start}&end_date=${end}&api_key=${apiKey}`

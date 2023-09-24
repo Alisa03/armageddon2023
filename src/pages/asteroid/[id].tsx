@@ -64,7 +64,7 @@ export default function IdPage({ meteor }: { meteor: IMeteor }) {
 }
 
 export async function getServerSideProps({ params }: any) {
-    const api_Key = process.env.API_KEY
+    const api_Key = "TnwsoDArReE0abFZZ2T0RTcQewIELp42XHs9ycxo"
 
     try {
         const response = await fetch(`https://api.nasa.gov/neo/rest/v1/neo/${params.id}?api_key=${api_Key}`)
